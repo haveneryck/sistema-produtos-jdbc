@@ -40,20 +40,21 @@ public class ProdutoDAO {
     // Método para consultar um produto pelo ID
     public Produto consultarPorId(int id) {
         String sql = "SELECT * FROM produtos WHERE id_produto = ?";
-        try (PreparedStatement stmt = ConexaoDB.prepareStatement(sql);
-             ResultSet rs = stmt.executeQuery()) {
-            stmt.setInt(1, id);
-            if (rs.next()) {
-                Produto produto = new Produto();
-                produto.setId(rs.getInt("id_produto"));
-                produto.setNome(rs.getString("nome_produto"));
-                produto.setQuantidade(rs.getInt("quantidade"));
-                produto.setPreco(rs.getDouble("preco"));
-                produto.setStatus(rs.getString("status"));
-                return produto;
+        try (PreparedStatement stmt = ConexaoDB.prepareStatement(sql)) {
+            stmt.setInt(1, id); //Definindo o parãmetro do ID antes de executar a consulta
+            try (ResultSet rs = stmt.executeQuery()) {
+                if (rs.next()) {
+                    Produto produto = new Produto();
+                    produto.setId(rs.getInt("id_produto"));
+                    produto.setNome(rs.getString("nome_produto"));
+                    produto.setQuantidade(rs.getInt("quantidade"));
+                    produto.setPreco(rs.getDouble("preco"));
+                    produto.setStatus(rs.getString("status"));
+                    return produto;
+                }
             }
-        } catch (Exception e) {
-            System.err.println("Erro ao consultar por ID: " + e.getMessage());
+        } catch (SQLException e) {
+            System.err.println("Erro ao consultar produto por ID: " + e.getMessage());
         }
         return null;
     }
