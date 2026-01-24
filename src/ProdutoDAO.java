@@ -15,8 +15,8 @@ public class ProdutoDAO {
 
     // Método para inserir un novo produto no bando de dados
     public void inserir(Produto produto) {
-        String sql = "INSERT INTO produtos (nome_produto, quantidade, preco, status) VALUES (?, ?, ?, ?,)";
-        try (PreparedStatement stmt = ConexaoDB.prepareStatement(sql)) {
+        String sql = "INSERT INTO produtos (nome_produto, quantidade, preco, status) VALUES (?, ?, ?, ?)";
+        try (PreparedStatement stmt = CONEXAO_DB.prepareStatement(sql)) {
             stmt.setString(1, produto.getNome());
             stmt.setInt(2, produto.getQuantidade());
             stmt.setDouble(3, produto.getPreco());
@@ -30,7 +30,7 @@ public class ProdutoDAO {
     // Método para excluir todos os produtos do banco de dados
     public void excluirTodos() {
         String sql = "DELETE FROM produtos";
-        try (PreparedStatement stmt = ConexaoDB.prepareStatement(sql)) {
+        try (PreparedStatement stmt = CONEXAO_DB.prepareStatement(sql)) {
             stmt.executeUpdate();
         } catch (SQLException e) {
             System.err.println("Erro ao excluir todos os produtos: " + e.getMessage());
@@ -40,7 +40,7 @@ public class ProdutoDAO {
     // Método para consultar um produto pelo ID
     public Produto consultarPorId(int id) {
         String sql = "SELECT * FROM produtos WHERE id_produto = ?";
-        try (PreparedStatement stmt = ConexaoDB.prepareStatement(sql)) {
+        try (PreparedStatement stmt = CONEXAO_DB.prepareStatement(sql)) {
             stmt.setInt(1, id); //Definindo o parãmetro do ID antes de executar a consulta
             try (ResultSet rs = stmt.executeQuery()) {
                 if (rs.next()) {
@@ -62,7 +62,7 @@ public class ProdutoDAO {
     // Método para atualizar as informações de um produto no banco de dados
     public void atualizar(Produto produto) {
         String sql = "UPDATE produtos SET nome_produto = ?, quantidade = ?, preco = ?, status = ? WHERE id_produto = ?";
-        try (PreparedStatement stmt = ConexaoDB.prepareStatement(sql)) {
+        try (PreparedStatement stmt = CONEXAO_DB.prepareStatement(sql)) {
             stmt.setString(1, produto.getNome());
             stmt.setInt(2, produto.getQuantidade());
             stmt.setDouble(3, produto.getPreco());
@@ -88,7 +88,7 @@ public class ProdutoDAO {
     // Método para listar todos os produtos do banco de dados
     public List<Produto> listarTodos() {
         List<Produto> produtos = new ArrayList<>();
-        String sql = "SELECT * produtos";
+        String sql = "SELECT * FROM produtos";
         try (PreparedStatement stmt = CONEXAO_DB.prepareStatement(sql);
              ResultSet rs = stmt.executeQuery()) {
             while (rs.next()) {
