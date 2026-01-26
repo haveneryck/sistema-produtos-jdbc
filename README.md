@@ -46,7 +46,7 @@ src/
 
 ### Pré-requisitos
 
-- Java JDK 17 ou superior
+- Java JDK 17 ou superior (testado em Java 22)
 - SQLite JDBC Driver (incluído no projeto)
 
 ### Passos
