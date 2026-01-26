@@ -8,7 +8,7 @@ Este projeto foi desenvolvido durante meu aprendizado de Java e JDBC, implementa
 
 ## 🚀 Tecnologias Utilizadas
 
-- **Java 17+**
+- **Java 22**
 - **JDBC** (Java Database Connectivity)
 - **SQLite** (Banco de dados)
 - **IntelliJ IDEA** (IDE)
