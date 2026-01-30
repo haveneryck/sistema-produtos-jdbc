@@ -85,7 +85,7 @@ Este projeto me permitiu consolidar conhecimentos em:
 **Vinicius Oliveira Brito**
 
 - GitHub: [@haveneryck](https://github.com/haveneryck)
-- LinkedIn: [Vinicius Oliveira Brito](https://www.linkedin.com/in/haveneryck)
+- LinkedIn: [Vinicius Oliveira /haveneryck](https://www.linkedin.com/in/haveneryck)
 - Localização: Montes Claros, MG
 
 ---
