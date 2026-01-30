@@ -128,7 +128,7 @@ public class ProdutoGUI extends Application {
         vbox.getChildren().addAll(nomeProdutoBox, quantidadeBox, precoBox, statusBox, buttonBox, tableView);
 
         Scene scene = new Scene(vbox, 800, 600);
-        //scene.getStylesheets().add("styles-produtos.css"); //Adiciona folha de estilos
+        scene.getStylesheets().add("styles-produtos.css"); //Adiciona folha de estilos
         palco.setScene(scene);
         palco.show();
     }
