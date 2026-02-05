@@ -12,7 +12,7 @@ Este projeto foi desenvolvido durante meu aprendizado de Java e JDBC, implementa
 ![Interface com produtos cadastrados](interface-com-dados.png)
 
 ### Interface Inicial
-![Interface vazia](screenshots/interface-vazia.png)
+![Interface vazia](interface-vazia.png)
 
 ## 🚀 Tecnologias Utilizadas
 
