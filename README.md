@@ -6,6 +6,14 @@ Sistema CRUD completo para gerenciamento de produtos desenvolvido em Java com JD
 
 Este projeto foi desenvolvido durante meu aprendizado de Java e JDBC, implementando um sistema backend completo com todas as operações CRUD (Create, Read, Update, Delete) para gerenciamento de produtos.
 
+## 🖼️ Screenshots
+
+### Interface Inicial
+![Interface vazia](screenshots/interface-vazia.png)
+
+### Interface com Dados
+![Interface com produtos cadastrados](screenshots/interface-com-dados.png)
+
 ## 🚀 Tecnologias Utilizadas
 
 - **Java 22**
