@@ -9,7 +9,7 @@ Este projeto foi desenvolvido durante meu aprendizado de Java e JDBC, implementa
 ## 🖼️ Screenshots
 
 ### Interface com Dados
-![Interface com produtos cadastrados](screenshots/interface-com-dados.png)
+![Interface com produtos cadastrados](interface-com-dados.png)
 
 ### Interface Inicial
 ![Interface vazia](screenshots/interface-vazia.png)
